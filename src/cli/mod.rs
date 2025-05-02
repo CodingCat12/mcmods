@@ -7,6 +7,7 @@ pub mod upgrade;
 use clap::Parser;
 use clap::Subcommand;
 
+/// A CLI tool to manage mod versions for your project.
 #[derive(Parser, Debug)]
 pub struct Args {
     #[command(subcommand)]
@@ -32,8 +33,10 @@ pub mod complete {
     use clap_complete::{generate, shells};
     use std::io;
 
+    /// Show completions.
     #[derive(Parser, Debug, Clone)]
     pub struct Args {
+        /// The shell to generate completions for.
         #[arg(long)]
         shell: Shell,
     }

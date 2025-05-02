@@ -7,7 +7,8 @@ use std::path::Path;
 
 #[derive(Parser, Debug, Clone)]
 pub struct Args {
-    #[arg(long)]
+    /// Maximum number of concurrent tasks (default: 3).
+    #[arg(long, value_name = "NUM")]
     max_concurrent_tasks: Option<usize>,
 }
 

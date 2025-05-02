@@ -5,6 +5,7 @@ use clap::Parser;
 use reqwest::Client;
 use std::path::Path;
 
+/// List installed mods.
 #[derive(Parser, Debug, Clone)]
 pub struct Args;
 

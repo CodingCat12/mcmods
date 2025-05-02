@@ -8,8 +8,11 @@ use anyhow::Result;
 use clap::Parser;
 use reqwest::Client;
 
+/// Remove a mod by project ID or slug.
 #[derive(Parser, Debug, Clone)]
 pub struct Args {
+    /// ID or slug of the project to remove.
+    #[arg(value_name = "PROJECT_ID")]
     project_id: String,
 }
 

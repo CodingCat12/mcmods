@@ -10,6 +10,49 @@ use std::path::Path;
 use std::sync::Arc;
 use tokio::sync::Semaphore;
 
+/// Install the latest compatible versions of specified mods.
+#[derive(Parser, Debug, Clone)]
+pub struct Args {
+    /// Project IDs of the mods to install.
+    #[arg(value_name = "PROJECT_ID", required = true)]
+    project_ids: Vec<String>,
+
+    /// Modloader to filter by (e.g., fabric, forge).
+    #[arg(
+        long,
+        short,
+        value_name = "LOADER",
+        help = "Optional loader type to match against."
+    )]
+    loader: Option<api::Loader>,
+
+    /// The game version to filter versions by (e.g., 1.21.4).
+    #[arg(
+        long,
+        short,
+        value_name = "VERSION",
+        help = "Optional Minecraft version to match."
+    )]
+    game_version: Option<String>,
+
+    /// The release channel to use (e.g., release, beta, alpha).
+    #[arg(
+        long,
+        short,
+        value_name = "CHANNEL",
+        help = "Version channel to filter (default: release)."
+    )]
+    version_type: Option<api::VersionType>,
+
+    /// Maximum number of concurrent download tasks (default: 3).
+    #[arg(
+        long,
+        value_name = "NUM",
+        help = "Set maximum concurrent tasks (default: 3)."
+    )]
+    max_concurrent_tasks: Option<usize>,
+}
+
 pub async fn cmd(
     lock: &mut Vec<LockVersion>,
     args: Args,
@@ -73,17 +116,4 @@ pub async fn cmd(
     install(client, lock, path, max_concurrent_tasks).await?;
 
     Ok::<_, anyhow::Error>(())
-}
-
-#[derive(Parser, Debug, Clone)]
-pub struct Args {
-    project_ids: Vec<String>,
-    #[arg(long, short)]
-    loader: Option<api::Loader>,
-    #[arg(long, short)]
-    game_version: Option<String>,
-    #[arg(long, short, value_name = "CHANNEL")]
-    version_type: Option<api::VersionType>,
-    #[arg(long)]
-    max_concurrent_tasks: Option<usize>,
 }

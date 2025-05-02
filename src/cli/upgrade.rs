@@ -10,19 +10,32 @@ use std::path::Path;
 use std::sync::Arc;
 use tokio::sync::Semaphore;
 
+/// Upgrade mods to their latest compatible versions.
 #[derive(Parser, Debug, Clone)]
 pub struct Args {
+    /// Project IDs to upgrade. Use `--all` to upgrade everything.
+    #[arg(value_name = "PROJECT_ID")]
     project_ids: Vec<String>,
-    #[arg(long, short)]
-    loader: Option<api::Loader>,
-    #[arg(long, short)]
-    game_version: Option<String>,
-    #[arg(long, short, value_name = "CHANNEL")]
-    version_type: Option<api::VersionType>,
-    #[arg(long)]
-    max_concurrent_tasks: Option<usize>,
+
+    /// Upgrade all installed mods.
     #[arg(long, short, conflicts_with = "project_ids")]
     all: bool,
+
+    /// Mod loader to filter by (e.g., fabric, forge).
+    #[arg(long, short, value_name = "LOADER")]
+    loader: Option<api::Loader>,
+
+    /// Minecraft version to filter by (e.g., 1.20.4).
+    #[arg(long, short, value_name = "VERSION")]
+    game_version: Option<String>,
+
+    /// Release channel to filter by (e.g., release, beta, alpha).
+    #[arg(long, short, value_name = "CHANNEL")]
+    version_type: Option<api::VersionType>,
+
+    /// Maximum number of concurrent tasks (default: 3).
+    #[arg(long, value_name = "NUM")]
+    max_concurrent_tasks: Option<usize>,
 }
 
 pub async fn cmd(
