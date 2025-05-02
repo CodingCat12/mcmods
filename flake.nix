@@ -1,6 +1,4 @@
 {
-  description = "A very basic flake";
-
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
