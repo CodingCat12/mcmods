@@ -15,11 +15,11 @@
   src = fetchFromGitHub {
     owner = "CodingCat12";
     repo = "mcmods";
-    rev = "c355c23";
-    hash = "sha256-wsIY/DrGTBQjWzbcwmJT0iZGLEmPgdZUULJ78kRbKiI=";
+    rev = "3448aba";
+    hash = "sha256-LYJrrcmNNsta7xxgtWkifHdiYfw2Y1Nxbtz+Sw5mauc=";
   };
 
-  cargoHash = "sha256-+nkJBtK8gDLjmW/bJM0We59bY0r15GvIeDZ1sxGgwOA=";
+  cargoHash = "sha256-GcSxrqF33aj7rstp9b5BC8DHjESFbJULR6gxFjBL6xI=";
 
   nativeBuildInputs = [pkg-config];
   buildInputs = [openssl];
