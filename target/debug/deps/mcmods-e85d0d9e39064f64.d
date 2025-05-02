@@ -1,0 +1,11 @@
+/home/luukm/Projects/mcmods2/target/debug/deps/mcmods-e85d0d9e39064f64.d: src/main.rs src/api.rs src/util.rs Cargo.toml
+
+/home/luukm/Projects/mcmods2/target/debug/deps/libmcmods-e85d0d9e39064f64.rmeta: src/main.rs src/api.rs src/util.rs Cargo.toml
+
+src/main.rs:
+src/api.rs:
+src/util.rs:
+Cargo.toml:
+
+# env-dep:CLIPPY_ARGS=--no-deps__CLIPPY_HACKERY__
+# env-dep:CLIPPY_CONF_DIR

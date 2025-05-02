@@ -1,0 +1,12 @@
+/home/luukm/Projects/mcmods2/target/debug/deps/tinystr-c4224b467bf4726b.d: /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/lib.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/macros.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/ascii.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/asciibyte.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/error.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/int_ops.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/unvalidated.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/ule.rs
+
+/home/luukm/Projects/mcmods2/target/debug/deps/libtinystr-c4224b467bf4726b.rmeta: /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/lib.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/macros.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/ascii.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/asciibyte.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/error.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/int_ops.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/unvalidated.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/ule.rs
+
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/lib.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/macros.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/ascii.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/asciibyte.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/error.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/int_ops.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/unvalidated.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.7.6/src/ule.rs:

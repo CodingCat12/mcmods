@@ -1,0 +1,43 @@
+[
+  {
+    "loaders": [
+      "fabric",
+      "quilt"
+    ],
+    "game_versions": [
+      "1.21.5"
+    ],
+    "id": "VWYoZjBF",
+    "project_id": "gvQqBUqZ",
+    "files": [
+      {
+        "hashes": {
+          "sha512": "09a68051504bb16069dd6af8901f2bbeadfd08ad5353d8bcc0c4784e814fb293d9197b4fb0a8393be1f2db003cd987a9e4b98391bbe18c50ae181dace20c2fa4"
+        },
+        "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/VWYoZjBF/lithium-fabric-0.16.2%2Bmc1.21.5.jar",
+        "filename": "lithium-fabric-0.16.2+mc1.21.5.jar",
+        "primary": true
+      }
+    ]
+  },
+  {
+    "loaders": [
+      "fabric"
+    ],
+    "game_versions": [
+      "1.21.1"
+    ],
+    "id": "4AkOEqGy",
+    "project_id": "P7dR8mSH",
+    "files": [
+      {
+        "hashes": {
+          "sha512": "11771581ceccf16534279b1db1a46c3c1a731fb11f4a52413e7c8b7f2cef181cca2ff5c1131280624fbd733ee37c1741bd7fb641613ffedbc7c5e68dd121a045"
+        },
+        "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/4AkOEqGy/fabric-api-0.115.6%2B1.21.1.jar",
+        "filename": "fabric-api-0.115.6+1.21.1.jar",
+        "primary": true
+      }
+    ]
+  }
+]

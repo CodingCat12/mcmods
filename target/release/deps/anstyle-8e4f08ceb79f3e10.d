@@ -1,0 +1,12 @@
+/home/luukm/Projects/mcmods/target/release/deps/anstyle-8e4f08ceb79f3e10.d: /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/lib.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/macros.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/color.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/effect.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/reset.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/style.rs
+
+/home/luukm/Projects/mcmods/target/release/deps/libanstyle-8e4f08ceb79f3e10.rlib: /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/lib.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/macros.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/color.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/effect.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/reset.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/style.rs
+
+/home/luukm/Projects/mcmods/target/release/deps/libanstyle-8e4f08ceb79f3e10.rmeta: /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/lib.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/macros.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/color.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/effect.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/reset.rs /home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/style.rs
+
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/lib.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/macros.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/color.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/effect.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/reset.rs:
+/home/luukm/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anstyle-1.0.10/src/style.rs:

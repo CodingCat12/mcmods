@@ -1,0 +1,1 @@
+/home/luukm/Projects/mcmods/target/release/mcmods: /home/luukm/Projects/mcmods/src/api.rs /home/luukm/Projects/mcmods/src/install.rs /home/luukm/Projects/mcmods/src/main.rs /home/luukm/Projects/mcmods/src/sync.rs

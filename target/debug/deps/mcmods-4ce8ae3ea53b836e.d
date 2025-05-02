@@ -1,0 +1,16 @@
+/home/luukm/Projects/mcmods2/target/debug/deps/mcmods-4ce8ae3ea53b836e.d: src/lib.rs src/api.rs src/cli/mod.rs src/cli/install.rs src/cli/remove.rs src/cli/upgrade.rs src/io.rs src/util.rs Cargo.toml
+
+/home/luukm/Projects/mcmods2/target/debug/deps/libmcmods-4ce8ae3ea53b836e.rmeta: src/lib.rs src/api.rs src/cli/mod.rs src/cli/install.rs src/cli/remove.rs src/cli/upgrade.rs src/io.rs src/util.rs Cargo.toml
+
+src/lib.rs:
+src/api.rs:
+src/cli/mod.rs:
+src/cli/install.rs:
+src/cli/remove.rs:
+src/cli/upgrade.rs:
+src/io.rs:
+src/util.rs:
+Cargo.toml:
+
+# env-dep:CLIPPY_ARGS=--no-deps__CLIPPY_HACKERY__
+# env-dep:CLIPPY_CONF_DIR
