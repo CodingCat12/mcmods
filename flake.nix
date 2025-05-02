@@ -15,7 +15,9 @@
         config,
         system,
         ...
-      }: let fenix = inputs.fenix.packages.${system}; in {
+      }: let
+        fenix = inputs.fenix.packages.${system};
+      in {
         packages.default = pkgs.callPackage ./nix/default.nix {};
         devShells.default = pkgs.callPackage ./nix/shell.nix {inherit fenix;};
         formatter = pkgs.alejandra;
