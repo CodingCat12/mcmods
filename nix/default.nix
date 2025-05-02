@@ -1,18 +1,16 @@
-{pkgs}: let
-  toolchain = pkgs.fenix.minimal.toolchain;
-in
-  (pkgs.makeRustPlatform {
-    cargo = toolchain;
-    rustc = toolchain;
-  })
-  .buildRustPackage {
-    pname = "mcmods";
-    version = "0.1.0";
+{
+  rustPlatform,
+  pkg-config,
+  openssl,
+}:
+rustPlatform.buildRustPackage rec {
+  pname = "mcmods";
+  version = "0.1.0";
 
-    src = ../.;
+  src = ../.;
 
-    cargoLock.lockFile = ../Cargo.lock;
+  cargoLock.lockFile = ../Cargo.lock;
 
-    nativeBuildInputs = [pkgs.pkg-config pkgs.openssl];
-    buildInputs = [pkgs.openssl pkgs.pkg-config];
-  }
+  nativeBuildInputs = [pkg-config];
+  buildInputs = [openssl];
+}

@@ -3,7 +3,7 @@
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; 
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     fenix.url = "github:nix-community/fenix";
   };
 
@@ -11,19 +11,13 @@
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin"];
       perSystem = {
+        pkgs,
         config,
         system,
         ...
-      }: let
-        pkgs = import inputs.nixpkgs {
-          inherit system;
-          overlays = [
-            inputs.fenix.overlays.default
-          ];
-        };
-      in {
-        packages.default = pkgs.callPackage ./nix/default.nix {inherit pkgs;};
-        devShells.default = pkgs.callPackage ./nix/shell.nix {inherit pkgs;};
+      }: let fenix = inputs.fenix.packages.${system}; in {
+        packages.default = pkgs.callPackage ./nix/default.nix {};
+        devShells.default = pkgs.callPackage ./nix/shell.nix {inherit fenix;};
         formatter = pkgs.alejandra;
       };
     };

@@ -1,6 +1,14 @@
-{pkgs}:
-pkgs.mkShell {
-  packages = with pkgs; [
+{
+  lib,
+  mkShell,
+  lldb,
+  fenix,
+  callPackage,
+  pkg-config,
+  openssl,
+}:
+mkShell rec {
+  packages = [
     (fenix.complete.withComponents [
       "cargo"
       "clippy"
@@ -10,11 +18,10 @@ pkgs.mkShell {
       "rust-analyzer"
     ])
     lldb
-
-    alejandra
-    nil
   ];
 
-  nativeBuildInputs = [pkgs.pkg-config];
-  buildInputs = [pkgs.openssl];
+  nativeBuildInputs = [pkg-config];
+  buildInputs = [openssl];
+
+  LD_LIBRARY_PATH = lib.makeLibraryPath buildInputs;
 }
