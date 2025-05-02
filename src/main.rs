@@ -36,7 +36,7 @@ async fn main() -> Result<()> {
         Command::Sync(args) => cli::sync::cmd(&mut lock, args, &client, mods_path).await,
         Command::List(args) => cli::list::cmd(&mut lock, args, &client, mods_path).await,
         Command::Upgrade(args) => cli::upgrade::cmd(&mut lock, args, &client, mods_path).await,
-        Command::Complete(args) => cli::complete::cmd(args).await,
+        Command::Complete(args) => cli::complete::cmd(args),
     }?;
 
     let json = serde_json::to_string_pretty(&lock)?;

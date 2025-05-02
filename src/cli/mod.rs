@@ -73,7 +73,7 @@ pub mod complete {
         }
     }
 
-    pub async fn cmd(args: Args) -> Result<()> {
+    pub fn cmd(args: Args) -> Result<()> {
         let mut cmd = super::Args::command();
         let bin_name = cmd.get_name().to_string();
         generate(args.shell, &mut cmd, bin_name, &mut io::stdout());
