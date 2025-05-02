@@ -1,9 +1,12 @@
 {
-  rustPlatform,
+  fenix,
+  makeRustPlatform,
   pkg-config,
   openssl,
 }:
-rustPlatform.buildRustPackage rec {
+(makeRustPlatform {
+  inherit (fenix) cargo rustc;
+}).buildRustPackage rec {
   pname = "mcmods";
   version = "0.1.0";
 

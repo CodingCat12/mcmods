@@ -9,7 +9,7 @@
 }:
 mkShell rec {
   packages = [
-    (fenix.complete.withComponents [
+    (fenix.withComponents [
       "cargo"
       "clippy"
       "rust-src"
