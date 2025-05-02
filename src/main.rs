@@ -1,28 +1,12 @@
 use mcmods::cli;
+use mcmods::cli::Args;
+use mcmods::cli::Command;
 
 use anyhow::Result;
 use clap::Parser;
-use clap::Subcommand;
 use reqwest::Client;
 use tokio::fs;
 use tokio::io::AsyncWriteExt;
-
-#[derive(Parser, Debug)]
-struct Args {
-    #[command(subcommand)]
-    command: Command,
-    #[arg(long, short)]
-    verbose: bool,
-}
-
-#[derive(Subcommand, Debug, Clone)]
-enum Command {
-    Install(cli::install::Args),
-    Remove(cli::remove::Args),
-    Sync(cli::sync::Args),
-    Upgrade(cli::upgrade::Args),
-    List(cli::list::Args),
-}
 
 #[tokio::main]
 async fn main() -> Result<()> {
@@ -52,6 +36,7 @@ async fn main() -> Result<()> {
         Command::Sync(args) => cli::sync::cmd(&mut lock, args, &client, mods_path).await,
         Command::List(args) => cli::list::cmd(&mut lock, args, &client, mods_path).await,
         Command::Upgrade(args) => cli::upgrade::cmd(&mut lock, args, &client, mods_path).await,
+        Command::Complete(args) => cli::complete::cmd(args).await,
     }?;
 
     let json = serde_json::to_string_pretty(&lock)?;
