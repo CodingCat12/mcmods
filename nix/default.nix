@@ -1,4 +1,5 @@
 {
+  lib,
   fenix,
   makeRustPlatform,
   fetchFromGitHub,
@@ -22,4 +23,9 @@
 
   nativeBuildInputs = [pkg-config];
   buildInputs = [openssl];
+
+  meta = with lib; {
+    description = "A simple Minecraft mod manager";
+    license = licenses.mit;
+  };
 }
