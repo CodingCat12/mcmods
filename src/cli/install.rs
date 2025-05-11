@@ -115,5 +115,5 @@ pub async fn cmd(
 
     install(client, lock, path, max_concurrent_tasks).await?;
 
-    Ok::<_, anyhow::Error>(())
+    Ok(())
 }
