@@ -1,4 +1,4 @@
-use crate::LockVersion;
+use crate::lock::Version;
 use crate::api;
 use anyhow::Result;
 use clap::Parser;
@@ -10,7 +10,7 @@ use std::path::Path;
 pub struct Args;
 
 pub async fn cmd(
-    lock: &mut Vec<LockVersion>,
+    lock: &mut Vec<Version>,
     _args: Args,
     client: &Client,
     _path: impl AsRef<Path>,

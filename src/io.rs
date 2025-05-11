@@ -1,4 +1,4 @@
-use crate::LockVersion;
+use crate::lock::Version;
 use crate::util::hash_file;
 use anyhow::Result;
 use futures::StreamExt;
@@ -13,7 +13,7 @@ use tokio::sync::Semaphore;
 
 pub async fn install(
     client: &Client,
-    lock: &[LockVersion],
+    lock: &[Version],
     path: impl AsRef<path::Path>,
     max_concurrent_tasks: usize,
 ) -> Result<()> {
@@ -52,7 +52,7 @@ pub async fn install(
     Ok(())
 }
 
-pub async fn uninstall(lock: &[LockVersion], path: impl AsRef<path::Path>) -> Result<()> {
+pub async fn uninstall(lock: &[Version], path: impl AsRef<path::Path>) -> Result<()> {
     let mut entries = fs::read_dir(path).await?;
 
     while let Some(entry) = entries.next_entry().await? {

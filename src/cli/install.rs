@@ -1,6 +1,6 @@
-use crate::LockVersion;
 use crate::api;
 use crate::io::install;
+use crate::lock::Version;
 use anyhow::Context;
 use anyhow::Result;
 use clap::Parser;
@@ -54,7 +54,7 @@ pub struct Args {
 }
 
 pub async fn cmd(
-    lock: &mut Vec<LockVersion>,
+    lock: &mut Vec<Version>,
     args: Args,
     client: &Client,
     path: impl AsRef<Path>,
@@ -109,7 +109,7 @@ pub async fn cmd(
     let versions = future::try_join_all(tasks).await?;
 
     for version in versions {
-        let version = LockVersion::from(version);
+        let version = Version::from(version);
         lock.push(version);
     }
 

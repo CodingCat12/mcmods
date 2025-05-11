@@ -1,4 +1,4 @@
-use crate::LockVersion;
+use crate::lock::Version;
 use crate::api;
 use crate::io::{install, uninstall};
 use anyhow::Context;
@@ -39,7 +39,7 @@ pub struct Args {
 }
 
 pub async fn cmd(
-    lock: &mut Vec<LockVersion>,
+    lock: &mut Vec<Version>,
     args: Args,
     client: &Client,
     path: impl AsRef<Path>,
@@ -104,13 +104,13 @@ pub async fn cmd(
     for (project_id, version) in results {
         if let Some(existing_version) = lock.iter().find(|v| v.project_id == project_id) {
             if existing_version.id != version.id {
-                let new_version = LockVersion::from(version);
+                let new_version = Version::from(version);
                 if let Some(pos) = lock.iter().position(|v| v.project_id == project_id) {
                     lock[pos] = new_version;
                 }
             }
         } else {
-            let new_version = LockVersion::from(version);
+            let new_version = Version::from(version);
             lock.push(new_version);
         }
     }

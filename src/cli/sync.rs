@@ -1,4 +1,4 @@
-use crate::LockVersion;
+use crate::lock::Version;
 use crate::io::{install, uninstall};
 use anyhow::Result;
 use clap::Parser;
@@ -13,7 +13,7 @@ pub struct Args {
 }
 
 pub async fn cmd(
-    lock: &mut [LockVersion],
+    lock: &mut [Version],
     args: Args,
     client: &Client,
     path: impl AsRef<Path>,
