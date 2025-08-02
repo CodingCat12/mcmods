@@ -1,8 +1,8 @@
 use crate::io::uninstall;
 use std::path::Path;
 
-use crate::lock::Version;
 use crate::api;
+use crate::lock::Version;
 use crate::util::retain_async;
 use anyhow::Result;
 use clap::Parser;

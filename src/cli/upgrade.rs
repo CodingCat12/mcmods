@@ -1,6 +1,6 @@
-use crate::lock::Version;
 use crate::api;
 use crate::io::{install, uninstall};
+use crate::lock::Version;
 use anyhow::Context;
 use anyhow::Result;
 use clap::Parser;

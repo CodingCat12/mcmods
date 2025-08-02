@@ -1,5 +1,5 @@
-use crate::lock::Version;
 use crate::io::{install, uninstall};
+use crate::lock::Version;
 use anyhow::Result;
 use clap::Parser;
 use reqwest::Client;
