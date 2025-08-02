@@ -4,6 +4,13 @@ pub mod remove;
 pub mod sync;
 pub mod upgrade;
 
+pub use complete::cmd as complete;
+pub use install::cmd as install;
+pub use list::cmd as list;
+pub use remove::cmd as remove;
+pub use sync::cmd as sync;
+pub use upgrade::cmd as upgrade;
+
 use clap::Parser;
 use clap::Subcommand;
 

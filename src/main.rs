@@ -31,12 +31,12 @@ async fn main() -> Result<()> {
     let args = Args::parse();
 
     match args.command {
-        Command::Install(args) => cli::install::cmd(&mut lock, args, &client, mods_path).await,
-        Command::Remove(args) => cli::remove::cmd(&mut lock, args, &client, mods_path).await,
-        Command::Sync(args) => cli::sync::cmd(&mut lock, args, &client, mods_path).await,
-        Command::List(args) => cli::list::cmd(&mut lock, args, &client, mods_path).await,
-        Command::Upgrade(args) => cli::upgrade::cmd(&mut lock, args, &client, mods_path).await,
-        Command::Complete(args) => cli::complete::cmd(args),
+        Command::Install(args) => cli::install(&mut lock, args, &client, mods_path).await,
+        Command::Remove(args) => cli::remove(&mut lock, args, &client, mods_path).await,
+        Command::Sync(args) => cli::sync(&mut lock, args, &client, mods_path).await,
+        Command::List(args) => cli::list(&mut lock, args, &client, mods_path).await,
+        Command::Upgrade(args) => cli::upgrade(&mut lock, args, &client, mods_path).await,
+        Command::Complete(args) => cli::complete(args),
     }?;
 
     let json = serde_json::to_string_pretty(&lock)?;
